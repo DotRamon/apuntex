@@ -1,0 +1,33 @@
+{
+  "$comment": "Copia este archivo como .apuntexrc.json en la raiz de TU proyecto para personalizar el protocolo sin tocar el codigo de la skill.",
+  "modelos": {
+    "interpretacion": "opencode/mimo-v2.5-free",
+    "resolucion_texto": "opencode/deepseek-v4-flash-free",
+    "compilacion": "opencode/deepseek-v4-flash-free"
+  },
+  "preferencias": {
+    "formato_salida": "latex",
+    "estilo_latex": "complete",
+    "incluir_diagramas": true,
+    "compilador": "latexmk",
+    "max_intentos_compilacion": 5,
+    "limpiar_auxiliares": true,
+    "directorio_salida": "./apuntex_output"
+  },
+  "geogebra": {
+    "habilitado": true,
+    "ruta_mcp": "~/.local/bin/geogebra-mcp",
+    "app": "suite",
+    "headless": true,
+    "exportar_svg": true,
+    "escala_png": 3
+  },
+  "dominio_especifico": {
+    "tipo": "ingenieria_electrica",
+    "paquetes_extra": ["circuitikz", "siunitx"]
+  },
+  "hooks_personalizados": {
+    "pre_interpretacion": ".apuntex/hooks/pre_interpretacion.md",
+    "post_compilacion": ".apuntex/hooks/post_compilacion.md"
+  }
+}

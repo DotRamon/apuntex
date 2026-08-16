@@ -1,0 +1,24 @@
+# Dependencias / node_modules
+node_modules/
+
+# Salidas de la skill
+apuntex_output/
+apuntes/
+build/
+
+# Config local del usuario (nunca compartir)
+.apuntexrc.json
+~/.config/apuntex/
+
+# Archivos auxiliares LaTeX
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.synctex.gz
+
+# Sistema
+.DS_Store
+*.swp

@@ -1,0 +1,107 @@
+{
+  "version": "1.0.0",
+  "descripcion": "Catalogo de modelos soportados por el protocolo apuntex. Todos los modelos opencode/* son gratuitos. Actualizar con: opencode models",
+  "familias": {
+    "free_opencode": {
+      "es_multimodal": "mimo-v2.5-free (Xiaomi MiMo 2.5, acepta imagenes)",
+      "nota": "Solo los modelos externos (google/*) aceptan imagenes de forma confiable. Los opencode/* sin preferencia destacada se tratan como texto (texto 0, imagenes opcionales)."
+    }
+  },
+  "modelos": {
+    "multimodales": [
+      {
+        "id": "opencode/mimo-v2.5-free",
+        "proveedor": "opencode",
+        "gratuito": true,
+        "multimodal": true,
+        "calidad": "buena",
+        "velocidad": "rapida",
+        "costo": "gratis",
+        "uso_recomendado": "Fase 1: Interpretacion de imagenes",
+        "nota": "Xiaomi MiMo 2.5. Unico modelo free de opencode con soporte multimodal confirmado para imagenes."
+      }
+    ],
+    "solo_texto": [
+      {
+        "id": "opencode/deepseek-v4-flash-free",
+        "proveedor": "opencode",
+        "gratuito": true,
+        "multimodal": false,
+        "calidad": "buena",
+        "velocidad": "muy_rapida",
+        "costo": "gratis",
+        "uso_recomendado": "Fases 2 y 3: Resolucion, estructuracion y compilacion",
+        "nota": "Modelo por defecto de muchos flujos. Recomendado para trabajo de texto + LaTeX + bash."
+      },
+      {
+        "id": "opencode/hy3-free",
+        "proveedor": "opencode",
+        "gratuito": true,
+        "multimodal": false,
+        "calidad": "buena",
+        "velocidad": "rapida",
+        "costo": "gratis",
+        "uso_recomendado": "Fase 3 auxiliar / tareas ligeras",
+        "nota": "Modelo ligero de opencode."
+      },
+      {
+        "id": "opencode/laguna-s-2.1-free",
+        "proveedor": "opencode",
+        "gratuito": true,
+        "multimodal": false,
+        "calidad": "buena",
+        "velocidad": "rapida",
+        "costo": "gratis",
+        "uso_recomendado": "Fases 2 y 3: Resolucion y compilacion",
+        "nota": "Modelo free de opencode para texto."
+      },
+      {
+        "id": "opencode/big-pickle",
+        "proveedor": "opencode",
+        "gratuito": true,
+        "multimodal": false,
+        "calidad": "buena",
+        "velocidad": "media",
+        "costo": "gratis",
+        "uso_recomendado": "Caso no critico / pruebas",
+        "nota": "Modelo free de opencode para texto."
+      },
+      {
+        "id": "opencode/nemotron-3-ultra-free",
+        "proveedor": "opencode",
+        "gratuito": true,
+        "multimodal": false,
+        "calidad": "alta",
+        "velocidad": "media",
+        "costo": "gratis",
+        "uso_recomendado": "Fases 2 y 3: Resolucion compleja, LaTeX avanzado",
+        "nota": "NVIDIA Nemotron 3 Ultra. Buen razonamiento para matematicas."
+      },
+      {
+        "id": "opencode/nemotron-3.5-lightning-free",
+        "proveedor": "opencode",
+        "gratuito": true,
+        "multimodal": false,
+        "calidad": "alta",
+        "velocidad": "muy_rapida",
+        "costo": "gratis",
+        "uso_recomendado": "Fase 3: Compilacion y verificacion de codigo LaTeX",
+        "nota": "NVIDIA Nemotron 3.5 Lightning. Rapido y eficiente."
+      }
+    ]
+  },
+  "recomendaciones_por_fase": {
+    "fase1_interpretacion": ["opencode/mimo-v2.5-free"],
+    "fase2_resolucion": ["opencode/deepseek-v4-flash-free", "opencode/nemotron-3-ultra-free", "opencode/laguna-s-2.1-free"],
+    "fase3_compilacion": ["opencode/deepseek-v4-flash-free", "opencode/nemotron-3.5-lightning-free", "opencode/hy3-free"]
+  },
+  "estrategia_cambio_modelo": {
+    "recomendacion": "Usar un modelo multimodal SOLO para la Fase 1 (interpretacion de la imagen). Al iniciar la Fase 2, cambiar a un modelo solo-texto para ahorrar cuota del proveedor multimodal.",
+    "transicion_automatica": true,
+    "comandos_tui": {
+      "cambiar_modelo": "En la TUI de opencode, presiona Ctrl+X → selecciona el modelo solo-texto deseado.",
+      "ejemplo_fase1": "opencode/mimo-v2.5-free",
+      "ejemplo_fase2": "opencode/deepseek-v4-flash-free"
+    }
+  }
+}

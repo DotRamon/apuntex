@@ -10,6 +10,12 @@ build/
 .apuntexrc.json
 ~/.config/apuntex/
 
+# Fixtures de imágenes (binarios pesados, no versionar)
+tests/fixtures/
+*.png
+*.jpg
+*.jpeg
+
 # Archivos auxiliares LaTeX
 *.aux
 *.log
@@ -18,6 +24,9 @@ build/
 *.bbl
 *.blg
 *.synctex.gz
+*.fdb_latexmk
+*.fls
+*.pdf
 
 # Sistema
 .DS_Store

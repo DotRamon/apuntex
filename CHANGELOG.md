@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.1.0
+
+- Agente `apuntex` (`.opencode/agent/apuntex.md`, mode: primary).
+- Comando `/tex` (`.opencode/command/tex.md`).
+- Documentación de 3 modos de uso (`docs/CONFIGURACION.md`).
+- Tests automatizados (`tests/run_tests.sh`) y CI (`tests/test_casos_uso.md`, `tests/prompts_fase1.md`).
+- CI en GitHub Actions (`.github/workflows/ci.yml`).
+- Guía de instalación de LaTeX por SO (Linux/macOS/Windows) — `docs/INSTALACION_LATEX.md`.
+- Guía multi-agente (Claude, Codex, Gemini, genérico) — `docs/AGENTES.md`.
+- README actualizado con badges, modos de uso y estructura.
+
 ## 1.0.0 (inicial)
 
 - Protocolo faseado de 3 fases con aprobaciones (interpretación → resolución → compilación).

@@ -1,6 +1,6 @@
 # Apuntex Protocol
 
-[![CI](https://github.com/DotRamon/apuntex-protocolo/actions/workflows/ci.yml/badge.svg)](https://github.com/DotRamon/apuntex-protocolo/actions/workflows/ci.yml)
+[![CI](https://github.com/BarbatosUC/apuntex-protocolo/actions/workflows/ci.yml/badge.svg)](https://github.com/BarbatosUC/apuntex-protocolo/actions/workflows/ci.yml)
 
 Protocolo faseado para transcribir imágenes (fotos, escaneos, apuntes) a
 LaTeX/Markdown, con aprobaciones en cada etapa. Se usa como **Skill**, como

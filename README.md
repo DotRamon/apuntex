@@ -33,9 +33,65 @@ Detalle en `docs/CONFIGURACION.md`.
 ## Requisitos
 
 - **Opencode** (o cualquier agente multimodal — ver `docs/AGENTES.md`).
-- **LaTeX** instalado (`latexmk`/`xelatex`/`pdflatex`).
-  Guías por SO: `docs/INSTALACION_LATEX.md` (Linux/macOS/Windows).
+- **LaTeX** instalado (`latexmk`/`xelatex`/`pdflatex`). Ver instalación por SO abajo.
 - Modelo multimodal para la Fase 1: `opencode/mimo-v2.5-free`.
+
+## Instalar LaTeX
+
+La Fase 3 compila `.tex` → PDF, así que necesitas un compilador LaTeX en tu sistema.
+
+<details>
+<summary><b>Linux</b> (Debian/Ubuntu · Arch · Fedora)</summary>
+
+```bash
+# Debian / Ubuntu / Mint
+sudo apt update
+sudo apt install -y texlive-latex-recommended texlive-latex-extra latexmk
+# completo (pesado): sudo apt install -y texlive-full
+
+# Arch / Manjaro
+sudo pacman -S texlive-most latexmk
+
+# Fedora
+sudo dnf install -y texlive-scheme-medium latexmk
+# completo: sudo dnf install -y texlive-scheme-full
+```
+</details>
+
+<details>
+<summary><b>macOS</b> (Homebrew)</summary>
+
+```bash
+# Completo
+brew install --cask mactex
+
+# Ligero (BasicTeX + latexmk)
+brew install --cask basictex
+export PATH="/usr/local/texlive/$(ls /usr/local/texlive | tail -1)/bin/universal-darwin:$PATH"
+sudo tlmgr install latexmk amsmath graphicx geometry babel-spanish
+```
+</details>
+
+<details>
+<summary><b>Windows</b> (MiKTeX · TeX Live · WSL2)</summary>
+
+```text
+MiKTeX (recomendada):
+  1. Descargar https://miktex.org/download
+  2. Instalar con "Install missing packages on the fly = Yes"
+  3. Verificar: latexmk --version (CMD)
+
+WSL2 (recomendada si ya usas Linux):
+  - Seguir la guía de Debian/Ubuntu dentro de WSL2.
+  - Abrir opencode dentro de WSL2 para que vea latexmk.
+
+TeX Live nativo:
+  - Descargar https://tug.org/texlive/
+  - Añadir C:\texlive\<año>\bin\windows al PATH.
+```
+</details>
+
+Verifica con `latexmk --version`. Guía completa: `docs/INSTALACION_LATEX.md`.
 
 ## Instalación rápida
 

@@ -113,25 +113,61 @@ TeX Live nativo:
 
 Verifica con `latexmk --version`. Guía completa: `docs/INSTALACION_LATEX.md`.
 
-## Instalación rápida
+## Instalación
 
-```bash
-# 1. Copiar la skill al proyecto
-mkdir -p .opencode/skills
-cp -r <ruta>/apuntex/.opencode/skills/apuntex .opencode/skills/
+### Opción A — Desde GitHub sin copiar archivos (más ágil)
 
-# 2. (Opcional) Agente + comando
-mkdir -p .opencode/agent .opencode/command
-cp <ruta>/apuntex/.opencode/agent/apuntex.md .opencode/agent/
-cp <ruta>/apuntex/.opencode/command/tex.md .opencode/command/
+Solo agrega una línea en tu `opencode.json` del proyecto:
 
-# 3. Config del proyecto (.apuntexrc.json)
-#    Copiar desde config/user-config.example.json y editar
-
-# 4. Reiniciar opencode para cargar la skill
+```json
+{
+  "skills": {
+    "urls": ["https://raw.githubusercontent.com/DotRamon/apuntex/main/.opencode/skills/apuntex/SKILL.md"]
+  }
+}
 ```
 
-Detalle en `docs/INSTALACION.md` y `docs/CONFIGURACION.md`.
+Reinicia opencode. La skill se carga directo desde GitHub. No necesitas clonar nada.
+
+> **Limitación**: esta opción solo funciona para la skill. Para el agente y
+> comando, usa la Opción B.
+
+### Opción B — Instalador local (recomendada)
+
+**Una línea** (desde la raíz del proyecto):
+
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/DotRamon/apuntex/main/install.sh) --all --config --latex
+```
+
+O **clonando y ejecutando**:
+
+```bash
+git clone https://github.com/DotRamon/apuntex.git /tmp/apuntex
+bash /tmp/apuntex/install.sh --all --config
+rm -rf /tmp/apuntex
+```
+
+Opciones del instalador:
+
+| Opción | Qué instala |
+|--------|-------------|
+| `--skill` | Solo la skill (`/skill apuntex img.png`) |
+| `--agent` | Solo el agente (modo automático) |
+| `--command` | Solo el comando (`/tex img.png`) |
+| `--all` | Todo: skill + agent + comando (por defecto) |
+| `--config` | Copia `.apuntexrc.json` al proyecto |
+| `--latex` | Verifica si LaTeX está instalado |
+
+Ejemplos:
+
+```bash
+bash install.sh --skill --config    # Solo skill + config
+bash install.sh --all --latex       # Todo + verificar LaTeX
+bash install.sh --latex             # Solo verificar LaTeX
+```
+
+Detalle: `docs/INSTALACION.md` · `docs/CONFIGURACION.md`.
 
 ## Configuración por proyecto
 

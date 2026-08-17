@@ -1,7 +1,9 @@
 # Changelog
 
-## 1.2.0
+## 1.3.0
 
+- Instalador `install.sh` con opciones `--skill`, `--agent`, `--command`, `--all`, `--config`, `--latex`.
+- Opción de instalación sin copiar archivos: `skills.urls` en `opencode.json` apunta directo a GitHub.
 - Identidad aclarada: Apuntex es un **asistente académico** que transcribe de
   forma fiel apuntes/imágenes a LaTeX/Markdown y además los resuelve explicando
   paso a paso. El flujo por etapas es su mecanismo interno, no su definición.

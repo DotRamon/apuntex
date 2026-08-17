@@ -1,12 +1,53 @@
 # Instalación de Apuntex
 
+## Opción A — Sin copiar archivos (más ágil)
+
+Solo agrega una línea en tu `opencode.json` del proyecto:
+
+```json
+{
+  "skills": {
+    "urls": ["https://raw.githubusercontent.com/DotRamon/apuntex/main/.opencode/skills/apuntex/SKILL.md"]
+  }
+}
+```
+
+Reinicia opencode. La skill se carga directo desde GitHub.
+Limitación: solo funciona para la skill. Para agente/comando, usa la Opción B.
+
+## Opción B — Instalador local (recomendada)
+
+```bash
+# Una línea desde la raíz del proyecto:
+bash <(curl -fsSL https://raw.githubusercontent.com/DotRamon/apuntex/main/install.sh) --all --config --latex
+```
+
+O clonar y ejecutar:
+
+```bash
+git clone https://github.com/DotRamon/apuntex.git /tmp/apuntex
+bash /tmp/apuntex/install.sh --all --config
+rm -rf /tmp/apuntex
+```
+
+Opciones del instalador (`install.sh --help`):
+
+| Opción | Qué instala |
+|--------|-------------|
+| `--skill` | Solo la skill (`/skill apuntex img.png`) |
+| `--agent` | Solo el agente (modo automático) |
+| `--command` | Solo el comando (`/tex img.png`) |
+| `--all` | Todo: skill + agent + comando (por defecto) |
+| `--config` | Copia `.apuntexrc.json` al proyecto |
+| `--latex` | Verifica si LaTeX está instalado |
+
 ## Requisitos previos
 
 | Dependencia | Necesaria | Notas |
 |-------------|-----------|-------|
 | Opencode reciente | Sí | Cualquier versión que soporte skills |
-| LaTeX (`latexmk`/`xelatex`/`pdflatex`) | Sí | Verificar: `which latexmk xelatex pdflatex` |
-| `geogebra-mcp` | No (opcional) | Solo para construcciones geométricas |
+| LaTeX (`latexmk`/`xelatex`/`pdflatex`) | Sí | Verificar con `install.sh --latex` |
+| `geogebra-mcp` | No (opcional) | Solo para construcciones geométricas | |
 
 ## Opción A — Instalación por proyecto (recomendada)
 

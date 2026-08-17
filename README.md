@@ -13,20 +13,17 @@ de cada quien.
 
 ## Documentación
 
-| Guía | Contenido |
-|------|-----------|
-| [Uso y configuración (3 modos)](docs/CONFIGURACION.md) | Skill vs Agent vs Comando; cómo elegir |
-| [**Uso en el chat**](docs/CONFIGURACION.md#modo-2--agent-por-defecto-automático) | Usar Apuntex directo en la conversación |
-| [Instalación](docs/INSTALACION.md) | Copiar skill/agent/command paso a paso |
-| [Instalar LaTeX](README.md#instalar-latex) | Requisito para compilar PDF (abajo en este README) |
-| [Instalación LaTeX por SO](docs/INSTALACION_LATEX.md) | Linux, macOS, Windows |
-| [Personalización por proyecto](docs/PERSONALIZACION.md) | `.apuntexrc.json`, hooks, dominios |
-| [Modelos soportados](docs/MODELOS.md) | Modelos free de opencode y cambio multimodal→texto |
-| [Uso con otros agentes](docs/AGENTES.md) | Claude, Codex, Gemini, genérico |
-| [Ejemplos](docs/EJEMPLOS.md) | Casos reales de uso |
-| Cambios | [CHANGELOG.md](CHANGELOG.md) |
-| Licencia | [LICENSE](LICENSE) |
-| Tests | [tests/](tests/) |
+| Archivo | Contenido |
+|---------|-----------|
+| [CONFIGURACION.md](CONFIGURACION.md) | 3 modos de uso: Skill vs Agent vs Comando |
+| [INSTALACION.md](INSTALACION.md) | Copiar skill/agent/command, script install.sh |
+| [INSTALACION_LATEX.md](INSTALACION_LATEX.md) | LaTeX por SO: Linux, macOS, Windows |
+| [PERSONALIZACION.md](PERSONALIZACION.md) | `.apuntexrc.json`, hooks, dominios |
+| [MODELOS.md](MODELOS.md) | Modelos free de opencode y cambio multimodal→texto |
+| [AGENTES.md](AGENTES.md) | Uso con Claude, Codex, Gemini, genérico |
+| [EJEMPLOS.md](EJEMPLOS.md) | Casos reales de uso |
+| [CHANGELOG.md](CHANGELOG.md) | Historial de versiones |
+| [LICENSE](LICENSE) | Licencia MIT |
 
 ---
 
@@ -48,11 +45,11 @@ Todo con control total del usuario: aprueba o corrige en cada etapa.
 | **Agent** | Proyecto 100% transcripción | `default_agent: "apuntex"` en `opencode.json` |
 | **Comando** | Atajo manual corto | `/tex /ruta/img.png` |
 
-Detalle en `docs/CONFIGURACION.md`.
+Detalle en `CONFIGURACION.md`.
 
 ## Requisitos
 
-- **Opencode** (o cualquier agente multimodal — ver `docs/AGENTES.md`).
+- **Opencode** (o cualquier agente multimodal — ver `AGENTES.md`).
 - **LaTeX** instalado (`latexmk`/`xelatex`/`pdflatex`). Ver instalación por SO abajo.
 - Modelo multimodal para la Fase 1: `opencode/mimo-v2.5-free`.
 
@@ -111,7 +108,7 @@ TeX Live nativo:
 ```
 </details>
 
-Verifica con `latexmk --version`. Guía completa: `docs/INSTALACION_LATEX.md`.
+Verifica con `latexmk --version`. Guía completa: `INSTALACION_LATEX.md`.
 
 ## Instalación
 
@@ -167,12 +164,12 @@ bash install.sh --all --latex       # Todo + verificar LaTeX
 bash install.sh --latex             # Solo verificar LaTeX
 ```
 
-Detalle: `docs/INSTALACION.md` · `docs/CONFIGURACION.md`.
+Detalle: `INSTALACION.md` · `CONFIGURACION.md`.
 
 ## Configuración por proyecto
 
 Apuntex se configura con `.apuntexrc.json` **en la raíz de cada proyecto**, no
-de forma global. Ver `config/user-config.example.json` y `docs/PERSONALIZACION.md`.
+de forma global. Ver `config/user-config.example.json` y `PERSONALIZACION.md`.
 
 ## Modelos
 
@@ -184,7 +181,7 @@ Todos los modelos opencode `/*-free` son gratuitos. La estrategia recomendada:
 | 2 (texto) | `opencode/deepseek-v4-flash-free` | Solo texto |
 | 3 (compilación) | `opencode/deepseek-v4-flash-free` | Solo texto |
 
-Catálogo completo en `config/models.json` y `docs/MODELOS.md`.
+Catálogo completo en `config/models.json` y `MODELOS.md`.
 
 ## Estructura del repositorio
 
@@ -204,18 +201,23 @@ apuntex/
 │   ├── latex_complete.tex
 │   ├── latex_minimal.tex
 │   └── markdown_academico.md
-├── docs/
-│   ├── CONFIGURACION.md             # 3 modos de uso
-│   ├── INSTALACION.md
-│   ├── INSTALACION_LATEX.md         # LaTeX por SO
-│   ├── AGENTES.md                   # Multi-agente
-│   ├── PERSONALIZACION.md
-│   ├── MODELOS.md
-│   └── EJEMPLOS.md
 ├── tests/
 │   ├── run_tests.sh                 # Validación automática
 │   ├── test_casos_uso.md
 │   └── prompts_fase1.md
+├── install.sh                       # Instalador
+├── .github/workflows/ci.yml         # CI en push/PR
+├── README.md                        # Este archivo (índice principal)
+├── CONFIGURACION.md                 # 3 modos de uso
+├── INSTALACION.md                   # Copiar skill/agent/command
+├── INSTALACION_LATEX.md             # LaTeX por SO
+├── PERSONALIZACION.md               # .apuntexrc.json, hooks
+├── MODELOS.md                       # Modelos free
+├── AGENTES.md                       # Multi-agente
+├── EJEMPLOS.md                      # Casos de uso
+├── CHANGELOG.md                     # Historial
+└── LICENSE                          # MIT
+```
 ├── .github/workflows/ci.yml         # CI en push/PR
 └── README.md
 ```

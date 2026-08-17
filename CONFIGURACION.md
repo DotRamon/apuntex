@@ -94,7 +94,7 @@ El comando invoca automáticamente al agente `apuntex`.
 ## Configuración compartida
 
 Los 3 modos leen la **misma** configuración del proyecto: `.apuntexrc.json`.
-Ver `docs/PERSONALIZACION.md`.
+Ver `PERSONALIZACION.md`.
 
 ## Recordatorio
 

@@ -287,4 +287,4 @@ Establecer con `dominio_especifico.tipo` en `.apuntexrc.json`.
 4. Reiniciar opencode para cargar la skill.
 5. Ejecutar `--setup` para generar su `.apuntexrc.json`.
 
-Detalle completo en `docs/INSTALACION.md`.
+Detalle completo en `INSTALACION.md`.

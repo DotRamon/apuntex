@@ -59,7 +59,7 @@ mkdir -p .opencode/skills
 cp -r <ruta-repo>/apuntex/.opencode/skills/apuntex .opencode/skills/
 ```
 
-Luego configurar el proyecto (ver `docs/PERSONALIZACION.md`).
+Luego configurar el proyecto (ver `PERSONALIZACION.md`).
 
 ## Opción B — Instalación global (fallback)
 

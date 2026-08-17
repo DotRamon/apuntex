@@ -76,4 +76,4 @@ Fase 1 (imagen)          → opción multimodal (opencode/mimo-v2.5-free)
 Fase 2/3 (texto+LaTeX)   → solo-texto (opencode/deepseek-v4-flash-free)
 ```
 
-Cambio con `Ctrl+X` en la TUI de opencode. Detalles en `docs/MODELOS.md`.
+Cambio con `Ctrl+X` en la TUI de opencode. Detalles en `MODELOS.md`.

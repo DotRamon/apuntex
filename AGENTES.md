@@ -97,4 +97,4 @@ Sigue el protocolo de 3 fases: (1) interpretar imagen y pedir aprobación,
 
 > La parte esencial que **no se puede externalizar** es el compilador LaTeX:
 > debe estar instalado en el sistema donde corre el agente
-> (ver `docs/INSTALACION_LATEX.md`).
+> (ver `INSTALACION_LATEX.md`).

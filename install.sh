@@ -82,7 +82,7 @@ check_latex() {
     echo "   • Windows:               Descargar MiKTeX https://miktex.org/download"
     echo "                            (requiere Strawberry Perl para latexmk)"
     echo ""
-    echo "   Guía completa: docs/INSTALACION_LATEX.md"
+    echo "   Guía completa: INSTALACION_LATEX.md"
     return 1
   fi
 }

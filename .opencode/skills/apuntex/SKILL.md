@@ -11,7 +11,7 @@ tags: transcripcion, latex, markdown, multimodal, ingenieria, matematicas
 
 # Apuntex — Protocolo de Transcripción Imagen → LaTeX
 
-> Proyecto: `apuntex-protocolo` · Autor: **DotRamon** · Versión 1.0.0 · Licencia MIT
+> Proyecto: `apuntex` · Autor: **DotRamon** · Versión 1.0.0 · Licencia MIT
 
 ## Qué hace esta skill
 

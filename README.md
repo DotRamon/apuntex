@@ -1,6 +1,6 @@
 # Apuntex
 
-[![CI](https://github.com/DotRamon/apuntex-protocolo/actions/workflows/ci.yml/badge.svg)](https://github.com/DotRamon/apuntex-protocolo/actions/workflows/ci.yml)
+[![CI](https://github.com/DotRamon/apuntex/actions/workflows/ci.yml/badge.svg)](https://github.com/DotRamon/apuntex/actions/workflows/ci.yml)
 
 Asistente académico que **transcribe de forma fiel** apuntes, fotos de pizarra
 y escaneos a **LaTeX/Markdown**, y además los **resuelve explicando paso a paso**.
@@ -8,6 +8,27 @@ Se usa como **Skill**, como **Agent** o como **Comando**, según la preferencia
 de cada quien.
 
 **Autor**: DotRamon · **Licencia**: MIT
+
+> **Repositorio público** — aportes son bienvenidos vía Issues y Pull Requests.
+
+## Documentación
+
+| Guía | Contenido |
+|------|-----------|
+| [Uso y configuración (3 modos)](docs/CONFIGURACION.md) | Skill vs Agent vs Comando; cómo elegir |
+| [**Uso en el chat**](docs/CONFIGURACION.md#modo-2--agent-por-defecto-automático) | Usar Apuntex directo en la conversación |
+| [Instalación](docs/INSTALACION.md) | Copiar skill/agent/command paso a paso |
+| [Instalar LaTeX](README.md#instalar-latex) | Requisito para compilar PDF (abajo en este README) |
+| [Instalación LaTeX por SO](docs/INSTALACION_LATEX.md) | Linux, macOS, Windows |
+| [Personalización por proyecto](docs/PERSONALIZACION.md) | `.apuntexrc.json`, hooks, dominios |
+| [Modelos soportados](docs/MODELOS.md) | Modelos free de opencode y cambio multimodal→texto |
+| [Uso con otros agentes](docs/AGENTES.md) | Claude, Codex, Gemini, genérico |
+| [Ejemplos](docs/EJEMPLOS.md) | Casos reales de uso |
+| Cambios | [CHANGELOG.md](CHANGELOG.md) |
+| Licencia | [LICENSE](LICENSE) |
+| Tests | [tests/](tests/) |
+
+---
 
 ## Qué hace
 
@@ -97,12 +118,12 @@ Verifica con `latexmk --version`. Guía completa: `docs/INSTALACION_LATEX.md`.
 ```bash
 # 1. Copiar la skill al proyecto
 mkdir -p .opencode/skills
-cp -r <ruta>/apuntex-protocolo/.opencode/skills/apuntex .opencode/skills/
+cp -r <ruta>/apuntex/.opencode/skills/apuntex .opencode/skills/
 
 # 2. (Opcional) Agente + comando
 mkdir -p .opencode/agent .opencode/command
-cp <ruta>/apuntex-protocolo/.opencode/agent/apuntex.md .opencode/agent/
-cp <ruta>/apuntex-protocolo/.opencode/command/tex.md .opencode/command/
+cp <ruta>/apuntex/.opencode/agent/apuntex.md .opencode/agent/
+cp <ruta>/apuntex/.opencode/command/tex.md .opencode/command/
 
 # 3. Config del proyecto (.apuntexrc.json)
 #    Copiar desde config/user-config.example.json y editar
@@ -132,7 +153,7 @@ Catálogo completo en `config/models.json` y `docs/MODELOS.md`.
 ## Estructura del repositorio
 
 ```
-apuntex-protocolo/
+apuntex/
 ├── .opencode/
 │   ├── skills/apuntex/
 │   │   ├── SKILL.md                 # La skill (name: apuntex)

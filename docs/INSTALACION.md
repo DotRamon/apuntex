@@ -15,7 +15,7 @@ Cada proyecto que quiera usar Apuntex copia la skill en su carpeta `.opencode/`:
 ```bash
 # Desde la raíz del proyecto destino
 mkdir -p .opencode/skills
-cp -r <ruta-repo>/apuntex-protocolo/.opencode/skills/apuntex .opencode/skills/
+cp -r <ruta-repo>/apuntex/.opencode/skills/apuntex .opencode/skills/
 ```
 
 Luego configurar el proyecto (ver `docs/PERSONALIZACION.md`).
@@ -24,7 +24,7 @@ Luego configurar el proyecto (ver `docs/PERSONALIZACION.md`).
 
 ```bash
 mkdir -p ~/.config/opencode/skills
-cp -r <ruta-repo>/apuntex-protocolo/.opencode/skills/apuntex ~/.config/opencode/skills/
+cp -r <ruta-repo>/apuntex/.opencode/skills/apuntex ~/.config/opencode/skills/
 ```
 
 ## Paso 3 — Configuración inicial interactiva

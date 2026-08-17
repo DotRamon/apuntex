@@ -1,24 +1,23 @@
-# Apuntex Protocol
+# Apuntex
 
 [![CI](https://github.com/DotRamon/apuntex-protocolo/actions/workflows/ci.yml/badge.svg)](https://github.com/DotRamon/apuntex-protocolo/actions/workflows/ci.yml)
 
-Protocolo faseado para transcribir imágenes (fotos, escaneos, apuntes) a
-LaTeX/Markdown, con aprobaciones en cada etapa. Se usa como **Skill**, como
-**Agent** o como **Comando**, según la preferencia de cada quien.
+Asistente académico que **transcribe de forma fiel** apuntes, fotos de pizarra
+y escaneos a **LaTeX/Markdown**, y además los **resuelve explicando paso a paso**.
+Se usa como **Skill**, como **Agent** o como **Comando**, según la preferencia
+de cada quien.
 
 **Autor**: DotRamon · **Licencia**: MIT
 
-## Qué resuelve
+## Qué hace
 
-Convierte imágenes de apuntes en documentos LaTeX compilables siguiendo un
-protocolo estricto de 3 fases:
+Apuntex toma una imagen (fotos, escaneos, apuntes manuscritos, diagramas) y:
 
-1. **Interpretación** → la imagen se analiza y se pide aprobación al usuario.
-2. **Resolución** → se resuelve paso a paso y se estructura en LaTeX/Markdown.
-3. **Compilación** → se generan `.tex`/`.md`/`.pdf` con compilación autónoma.
+1. **Transcribe fielmente** el enunciado, fórmulas y estructura del apunte.
+2. **Resuelve y explica** paso a paso, actuando como tutor académico.
+3. **Genera** documentos LaTeX/Markdown estructurados y compila el PDF.
 
-El valor no es una herramienta dedicada, sino **el protocolo faseado** con
-control total del usuario.
+Todo con control total del usuario: aprueba o corrige en cada etapa.
 
 ## 3 modos de uso
 

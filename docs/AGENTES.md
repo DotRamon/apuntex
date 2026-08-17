@@ -1,15 +1,15 @@
 # Uso con Otros Agentes
 
-El protocolo Apuntex es **portable**: no depende de una plataforma específica.
-Se puede replicar en cualquier agente que:
+Apuntex es **portable**: su flujo de trabajo no depende de una plataforma
+específica. Se puede replicar en cualquier agente que:
 
 1. Acepte **imágenes** (modelo multimodal).
 2. Pueda **escribir archivos** (`.tex`, `.md`).
 3. Pueda **ejecutar comandos** (compilador LaTeX).
 
 La skill nativa vive en `.opencode/skills/apuntex/SKILL.md` y el agente en
-`.opencode/agent/apuntex.md`. Para otros agentes, copia el **protocolo faseado**
-como instrucciones de sistema.
+`.opencode/agent/apuntex.md`. Para otros agentes, copia el **flujo de trabajo
+por etapas** como instrucciones de sistema.
 
 ---
 

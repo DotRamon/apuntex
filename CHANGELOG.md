@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.2.0
+
+- Identidad aclarada: Apuntex es un **asistente académico** que transcribe de
+  forma fiel apuntes/imágenes a LaTeX/Markdown y además los resuelve explicando
+  paso a paso. El flujo por etapas es su mecanismo interno, no su definición.
+- README, frontmatter de skill/agente y descripción de GitHub actualizados.
+
 ## 1.1.0
 
 - Agente `apuntex` (`.opencode/agent/apuntex.md`, mode: primary).

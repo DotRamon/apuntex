@@ -1,6 +1,6 @@
 ---
 name: apuntex
-description: Protocolo faseado para transcribir imagenes (fotos, escaneos, apuntes) a LaTeX/Markdown con aprobaciones en cada etapa. Compatible con modelos multimodal y solo-texto de opencode free. Usar cuando el usuario suba o refiera una imagen, foto de pizarra, escaneo o ejercicio manuscrito y quiera convertirlo a un documento LaTeX o Markdown compilable.
+description: Asistente academico que transcribe de forma fiel apuntes e imagenes (fotos, escaneos, pizarrones) a LaTeX/Markdown y los resuelve explicando paso a paso. Usar cuando el usuario suba o refiera una imagen, foto de pizarra, escaneo o ejercicio manuscrito y quiera convertirlo a un documento LaTeX o Markdown compilable.
 license: MIT
 compatibility: opencode, claude-code, codex-cli
 metadata:
@@ -15,12 +15,14 @@ tags: transcripcion, latex, markdown, multimodal, ingenieria, matematicas
 
 ## Qué hace esta skill
 
-Convierte **imágenes** (fotos de pizarra, escaneos, apuntes manuscritos, diagramas)
-en documentos **LaTeX** o **Markdown** estructurados y compilables, siguiendo un
-protocolo estricto de **3 fases con aprobación del usuario** en cada una.
+Apuntex es un **asistente académico**: transcribe de forma fiel **imágenes**
+(fotos de pizarra, escaneos, apuntes manuscritos, diagramas) a documentos
+**LaTeX** o **Markdown** estructurados y compilables, y además los **resuelve
+explicando paso a paso**.
 
-El núcleo del valor **no es una herramienta específica**, sino el **protocolo faseado**:
-interpretación → resolución → compilación, con control total del usuario.
+El valor **no es una herramienta específica**, sino la **transcripción fiel
+más resolución tutorial** con control total del usuario: aprueba o corrige en
+cada etapa.
 
 ---
 
